@@ -1,0 +1,279 @@
+
+@font-face {
+  font-family: "Torus";
+  src: url("../resources/fonts/thorus.ttf");
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Torus", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #1C1B29;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#onThePage {
+  color: #bc4824;
+}
+
+ul li {
+  list-style: none;
+}
+
+.topbar {
+  position: fixed;
+  padding: 0 25px;
+  z-index: 20;
+  max-width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 1px 0px 15px #5445ff;
+  /*background: red;*/
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.topbar.active {
+  transform: translateX(0%);
+}
+
+.topbar ul {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  /*background: green;*/
+  flex-direction: column;
+  /*width: 100%;*/
+}
+
+.topbar ul li {
+  margin: 1rem;
+  text-transform: capitalize;
+  transition: 0.1s ease-in-out;
+}
+
+.topbar ul li:hover {
+  opacity: 0.8;
+}
+
+.topbar img {
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.topbar button {
+  margin: 1rem;
+  padding: 15px 30px;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #5445ff;
+  color: white;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.topbar button:hover {
+  background: #5445ff;
+}
+
+.burger {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  background: #ff8a76;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+.burger .line {
+  background: #fff;
+  width: 2rem;
+  height: 0.25rem;
+  margin: 0.2rem 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  height: 100vh;
+  width: calc(100vw - 15%);
+}
+
+.container h1 {
+  font-size: 4rem;
+  color: #f1f1f1;
+  margin: 1.8rem 0;
+  text-align: center;
+}
+
+#myChart {
+  margin: 0 auto;
+  position: relative;
+  max-width: 85%;
+}
+
+.contralBar {
+  margin: 0 auto;
+  padding-left: 80px;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.contralBar button {
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin: 0.5rem;
+  color: white;
+  transition: .15s ease-in;
+}
+
+.contralBar button:nth-child(1) {
+  background: #28a745;
+  border: 2px solid #28a745;
+}
+
+.contralBar button:nth-child(2) {
+  border: 2px solid #dc3545;
+  background: #dc3545;
+}
+
+.contralBar button:nth-child(3) {
+  border: 2px solid #ffc107;
+  background: #ffc107;
+}
+
+.contralBar button:nth-child(4) {
+  border: 2px solid #17a2b8;
+  background: #17a2b8;
+}
+
+.contralBar button:hover {
+  background: transparent;
+}
+
+.infoBar {
+  margin: 0 auto;
+  padding-left: 80px;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.infoBar .infoP {
+  margin-top: calc(1.5rem - 0.8rem);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+@media screen and (max-width: 1450px) {
+  .topbar {
+    max-width: 30%;
+    transform: translateX(-100%);
+    background: #333;
+  }
+  .burger {
+    display: flex;
+  }
+  .container {
+    left: 0;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 930px) {
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .topbar {
+    max-width: 40%;
+    padding: 0;
+  }
+  .topbar img {
+    height: 2rem;
+  }
+
+
+  .contralBar {
+    padding-left: 0;
+    flex-direction: column;
+  }
+  .contralBar button {
+    width: 50%;
+    margin: 10px auto;
+    /*padding: 0.6rem 1.6rem;*/
+  }
+
+  .infoBar {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topbar {
+    max-width: 40%;
+  }
+  .topbar img {
+    height: 1rem;
+  }
+}
+
+
+
+
+/*
+@media screen and (max-width: 600px) {
+  .topbar {
+    display: none;
+  }
+
+  .mobile {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mobile img {
+    height: 75%;
+    cursor: pointer;
+  }
+  .mobile img:nth-child(2) {
+    height: 105%;
+  }
+} */

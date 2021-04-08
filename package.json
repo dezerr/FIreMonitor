@@ -1,0 +1,11 @@
+{
+  "name": "firemonitor",
+  "version": "1.0.0",
+  "description": "FireMonitor permettra aux grandes infrastructures comme les entreprises, les hôpitaux, les ehpads de surveiller et d'alerter les incendies grâce aux fonctionnalités ajoutées.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florian",
+  "license": "ISC"
+}
